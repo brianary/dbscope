@@ -1,8 +1,3 @@
-// by Brian Lalonde http://webcoder.info/downloads/
-// This work is licensed under the Creative Commons Attribution-Share Alike 3.0 License. 
-// To view a copy of this license, visit http://creativecommons.org/licenses/by-sa/3.0/ 
-// or send a letter to Creative Commons, 543 Howard Street, 5th Floor, San Francisco, California, 94105, USA.
-
 using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
@@ -12,7 +7,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.Common;
 using System.Diagnostics;
-using System.Drawing;
+using System.Drawing; 
 using System.Text;
 using System.Windows.Forms;
 
