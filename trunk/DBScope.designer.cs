@@ -28,19 +28,19 @@ namespace DBScope
         /// </summary>
         private void InitializeComponent()
         {
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
-			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+			System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
 			this.Splitter = new System.Windows.Forms.SplitContainer();
 			this.DataTree = new System.Windows.Forms.TreeView();
 			this.AboutUI = new System.Windows.Forms.Panel();
@@ -227,7 +227,7 @@ namespace DBScope
 			this.ProductLabel.Padding = new System.Windows.Forms.Padding(0, 3, 3, 3);
 			this.ProductLabel.Size = new System.Drawing.Size(168, 35);
 			this.ProductLabel.TabIndex = 0;
-			this.ProductLabel.Text = "DBScope 1.2";
+			this.ProductLabel.Text = "DBScope 1.3";
 			// 
 			// TableUI
 			// 
@@ -282,8 +282,8 @@ namespace DBScope
 			this.TableColumnsGrid.AllowUserToAddRows = false;
 			this.TableColumnsGrid.AllowUserToDeleteRows = false;
 			this.TableColumnsGrid.AllowUserToResizeRows = false;
-			dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.TableColumnsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+			dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.TableColumnsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle14;
 			this.TableColumnsGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.TableColumnsGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.TableColumnsGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -310,8 +310,8 @@ namespace DBScope
 			// TableSampleDataGrid
 			// 
 			this.TableSampleDataGrid.AllowUserToResizeRows = false;
-			dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.TableSampleDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
+			dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.TableSampleDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
 			this.TableSampleDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
 			this.TableSampleDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
 			this.TableSampleDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -337,8 +337,8 @@ namespace DBScope
 			// 
 			// TableDataGrid
 			// 
-			dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.TableDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+			dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.TableDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
 			this.TableDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
 			this.TableDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
 			this.TableDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -367,8 +367,9 @@ namespace DBScope
 			this.TableRowGrid.AllowUserToAddRows = false;
 			this.TableRowGrid.AllowUserToDeleteRows = false;
 			this.TableRowGrid.AllowUserToResizeRows = false;
-			dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.TableRowGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
+			dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.TableRowGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+			this.TableRowGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
 			this.TableRowGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.TableRowGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.TableRowGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -419,8 +420,8 @@ namespace DBScope
 			this.ColumnStatsGrid.AllowUserToAddRows = false;
 			this.ColumnStatsGrid.AllowUserToDeleteRows = false;
 			this.ColumnStatsGrid.AllowUserToResizeRows = false;
-			dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.ColumnStatsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
+			dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.ColumnStatsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle18;
 			this.ColumnStatsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.ColumnStatsGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.ColumnStatsGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -452,8 +453,8 @@ namespace DBScope
 			this.ColumnDataGrid.AllowUserToAddRows = false;
 			this.ColumnDataGrid.AllowUserToDeleteRows = false;
 			this.ColumnDataGrid.AllowUserToResizeRows = false;
-			dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.ColumnDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
+			dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.ColumnDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
 			this.ColumnDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.ColumnDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
 			this.ColumnDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -556,8 +557,8 @@ namespace DBScope
 			// ResultsGrid
 			// 
 			this.ResultsGrid.AllowUserToResizeRows = false;
-			dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.ResultsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
+			dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.ResultsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle20;
 			this.ResultsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
 			this.ResultsGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
 			this.ResultsGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -589,8 +590,8 @@ namespace DBScope
 			this.ResultsRowGrid.AllowUserToAddRows = false;
 			this.ResultsRowGrid.AllowUserToDeleteRows = false;
 			this.ResultsRowGrid.AllowUserToResizeRows = false;
-			dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.ResultsRowGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
+			dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.ResultsRowGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
 			this.ResultsRowGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.ResultsRowGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
 			this.ResultsRowGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -639,8 +640,8 @@ namespace DBScope
 			this.ConnectionInfo.AllowUserToAddRows = false;
 			this.ConnectionInfo.AllowUserToDeleteRows = false;
 			this.ConnectionInfo.AllowUserToResizeRows = false;
-			dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.ConnectionInfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
+			dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.ConnectionInfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
 			this.ConnectionInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.ConnectionInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.ConnectionInfo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -659,19 +660,19 @@ namespace DBScope
 			// 
 			this.ReservedWords.AllowUserToAddRows = false;
 			this.ReservedWords.AllowUserToDeleteRows = false;
-			dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
-			this.ReservedWords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
+			dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
+			this.ReservedWords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle23;
 			this.ReservedWords.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.ReservedWords.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.ReservedWords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-			dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-			dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-			dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
-			dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-			dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-			dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-			this.ReservedWords.DefaultCellStyle = dataGridViewCellStyle11;
+			dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+			dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+			dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
+			dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+			dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+			dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+			this.ReservedWords.DefaultCellStyle = dataGridViewCellStyle24;
 			this.ReservedWords.Dock = System.Windows.Forms.DockStyle.Right;
 			this.ReservedWords.Location = new System.Drawing.Point(394, 0);
 			this.ReservedWords.Name = "ReservedWords";
@@ -688,8 +689,8 @@ namespace DBScope
 			this.DataTypes.AllowUserToAddRows = false;
 			this.DataTypes.AllowUserToDeleteRows = false;
 			this.DataTypes.AllowUserToResizeRows = false;
-			dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.DataTypes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
+			dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.DataTypes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
 			this.DataTypes.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.DataTypes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
 			this.DataTypes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -718,8 +719,8 @@ namespace DBScope
 			// 
 			// ConnectionStringValues
 			// 
-			dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-			this.ConnectionStringValues.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
+			dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+			this.ConnectionStringValues.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
 			this.ConnectionStringValues.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
 			this.ConnectionStringValues.BorderStyle = System.Windows.Forms.BorderStyle.None;
 			this.ConnectionStringValues.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
