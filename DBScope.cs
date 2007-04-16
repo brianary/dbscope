@@ -7,7 +7,7 @@ using System.Configuration;
 using System.Data;
 using System.Data.Common;
 using System.Diagnostics;
-using System.Drawing; 
+using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
 
@@ -16,6 +16,8 @@ namespace DBScope
 	public partial class Scope : Form
 	{
 		readonly string[] StatsQuery;
+
+		MagicNumberLite.Inspector Typist;
 
 		private class DistinguishedConnection : IDisposable
 		{
@@ -127,6 +129,7 @@ namespace DBScope
 				queries.Add(ConfigurationManager.AppSettings["StatsQuery." + i.ToString()]);
 			StatsQuery = new string[queries.Count];
 			queries.CopyTo(StatsQuery, 0);
+			Typist = new MagicNumberLite.Inspector();
 			InitializeComponent();
 		}
 
@@ -442,6 +445,7 @@ namespace DBScope
 			ResultsRowGrid.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
 			ResultsRowGrid.Columns[0].Width = 150;
 			ResultsRowGrid.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+			ResultsRowGrid.Columns[1].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 			ResultsRowGrid.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
 			ResultsRowGrid.Columns[2].Width = 150;
 		}
@@ -489,6 +493,7 @@ namespace DBScope
 					TableRowGrid.DataSource = FlipRow(row.Row);
 					TableRowGrid.Columns[0].Width = 150;
 					TableRowGrid.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+					TableRowGrid.Columns[1].DefaultCellStyle.WrapMode = DataGridViewTriState.True;
 					TableRowGrid.Columns[2].Width = 150;
 					break;
 			}
@@ -604,7 +609,15 @@ namespace DBScope
 			table.Columns.Add("Value");
 			table.Columns.Add("Type");
 			foreach (DataColumn col in row.Table.Columns)
-				table.Rows.Add(new object[] { col.ColumnName, row[col], col.DataType });
+			{
+				if (row[col] is byte[])
+				{
+					MagicNumberLite.DataType type = Typist.GetDataType((byte[])row[col]);
+					table.Rows.Add(new object[] { col.ColumnName + " (type)", type.Name, type.MimeType });
+				}
+				else
+					table.Rows.Add(new object[] { col.ColumnName, row[col], col.DataType });
+			}
 			return table;
 		}
 	}
