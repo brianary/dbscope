@@ -620,5 +620,29 @@ namespace DBScope
 			}
 			return table;
 		}
+
+		private void ColumnDataGrid_DataError(object sender, DataGridViewDataErrorEventArgs e)
+		{
+			Trace.TraceError("Column data grid error: {0}\n{1}", e.Context.ToString(), e.Exception.ToString());
+			e.ThrowException = false;
+		}
+
+		private void ResultsGrid_DataError(object sender, DataGridViewDataErrorEventArgs e)
+		{
+			Trace.TraceError("Results grid error: {0}\n{1}", e.Context.ToString(), e.Exception.ToString());
+			e.ThrowException = false;
+		}
+
+		private void TableDataGrid_DataError(object sender, DataGridViewDataErrorEventArgs e)
+		{
+			Trace.TraceError("Table data grid error: {0}\n{1}", e.Context.ToString(), e.Exception.ToString());
+			e.ThrowException = false;
+		}
+
+		private void TableSampleDataGrid_DataError(object sender, DataGridViewDataErrorEventArgs e)
+		{
+			Trace.TraceError("Table sample grid error: {0}\n{1}", e.Context.ToString(), e.Exception.ToString());
+			e.ThrowException = false;
+		}
 	}
 }
