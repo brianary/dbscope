@@ -227,7 +227,7 @@ namespace DBScope
 			this.ProductLabel.Padding = new System.Windows.Forms.Padding(0, 3, 3, 3);
 			this.ProductLabel.Size = new System.Drawing.Size(168, 35);
 			this.ProductLabel.TabIndex = 0;
-			this.ProductLabel.Text = "DBScope 1.4";
+			this.ProductLabel.Text = "DBScope 1.5";
 			// 
 			// TableUI
 			// 
