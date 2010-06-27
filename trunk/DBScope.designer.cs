@@ -28,26 +28,21 @@ namespace DBScope
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle14 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle15 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle16 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle17 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle18 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle13 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Splitter = new System.Windows.Forms.SplitContainer();
             this.DataTree = new System.Windows.Forms.TreeView();
-            this.AboutUI = new System.Windows.Forms.Panel();
-            this.LicenseLink = new System.Windows.Forms.LinkLabel();
-            this.SiteLink = new System.Windows.Forms.LinkLabel();
-            this.CreditLabel = new System.Windows.Forms.Label();
-            this.ProductLabel = new System.Windows.Forms.Label();
             this.TableUI = new System.Windows.Forms.Panel();
             this.TableRowCount = new System.Windows.Forms.Label();
             this.TableTabs = new System.Windows.Forms.TabControl();
@@ -87,10 +82,14 @@ namespace DBScope
             this.ConnectionStringBox = new System.Windows.Forms.TextBox();
             this.ConnectionStringLabel = new System.Windows.Forms.Label();
             this.AddConnectionButton = new System.Windows.Forms.Button();
+            this.AboutUI = new System.Windows.Forms.Panel();
+            this.LicenseLink = new System.Windows.Forms.LinkLabel();
+            this.SiteLink = new System.Windows.Forms.LinkLabel();
+            this.CreditLabel = new System.Windows.Forms.Label();
+            this.ProductLabel = new System.Windows.Forms.Label();
             this.Splitter.Panel1.SuspendLayout();
             this.Splitter.Panel2.SuspendLayout();
             this.Splitter.SuspendLayout();
-            this.AboutUI.SuspendLayout();
             this.TableUI.SuspendLayout();
             this.TableTabs.SuspendLayout();
             this.TableColumnsTab.SuspendLayout();
@@ -125,6 +124,7 @@ namespace DBScope
             ((System.ComponentModel.ISupportInitialize)(this.DataTypes)).BeginInit();
             this.ProviderUI.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConnectionStringValues)).BeginInit();
+            this.AboutUI.SuspendLayout();
             this.SuspendLayout();
             // 
             // Splitter
@@ -161,72 +161,6 @@ namespace DBScope
             this.DataTree.TabIndex = 0;
             this.DataTree.BeforeExpand += new System.Windows.Forms.TreeViewCancelEventHandler(this.DataTree_BeforeExpand);
             this.DataTree.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.DataTree_AfterSelect);
-            // 
-            // AboutUI
-            // 
-            this.AboutUI.BackColor = System.Drawing.SystemColors.Info;
-            this.AboutUI.Controls.Add(this.LicenseLink);
-            this.AboutUI.Controls.Add(this.SiteLink);
-            this.AboutUI.Controls.Add(this.CreditLabel);
-            this.AboutUI.Controls.Add(this.ProductLabel);
-            this.AboutUI.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.AboutUI.Location = new System.Drawing.Point(0, 0);
-            this.AboutUI.Name = "AboutUI";
-            this.AboutUI.Size = new System.Drawing.Size(542, 622);
-            this.AboutUI.TabIndex = 0;
-            // 
-            // LicenseLink
-            // 
-            this.LicenseLink.AutoSize = true;
-            this.LicenseLink.Dock = System.Windows.Forms.DockStyle.Top;
-            this.LicenseLink.Location = new System.Drawing.Point(0, 73);
-            this.LicenseLink.Name = "LicenseLink";
-            this.LicenseLink.Padding = new System.Windows.Forms.Padding(7, 3, 3, 3);
-            this.LicenseLink.Size = new System.Drawing.Size(171, 19);
-            this.LicenseLink.TabIndex = 3;
-            this.LicenseLink.TabStop = true;
-            this.LicenseLink.Tag = "http://www.gnu.org/licenses/gpl.html";
-            this.LicenseLink.Text = "GNU General Public License 2.0";
-            this.LicenseLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LicenseLink_LinkClicked);
-            // 
-            // SiteLink
-            // 
-            this.SiteLink.AutoSize = true;
-            this.SiteLink.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SiteLink.Location = new System.Drawing.Point(0, 54);
-            this.SiteLink.Name = "SiteLink";
-            this.SiteLink.Padding = new System.Windows.Forms.Padding(7, 3, 3, 3);
-            this.SiteLink.Size = new System.Drawing.Size(244, 19);
-            this.SiteLink.TabIndex = 2;
-            this.SiteLink.TabStop = true;
-            this.SiteLink.Text = "http://webcoder.info/downloads/DBScope.html";
-            this.SiteLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SiteLink_LinkClicked);
-            // 
-            // CreditLabel
-            // 
-            this.CreditLabel.AutoSize = true;
-            this.CreditLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.CreditLabel.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.CreditLabel.Location = new System.Drawing.Point(0, 35);
-            this.CreditLabel.Margin = new System.Windows.Forms.Padding(3);
-            this.CreditLabel.Name = "CreditLabel";
-            this.CreditLabel.Padding = new System.Windows.Forms.Padding(7, 3, 3, 3);
-            this.CreditLabel.Size = new System.Drawing.Size(96, 19);
-            this.CreditLabel.TabIndex = 1;
-            this.CreditLabel.Text = "by Brian Lalonde";
-            // 
-            // ProductLabel
-            // 
-            this.ProductLabel.AutoSize = true;
-            this.ProductLabel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.ProductLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProductLabel.ForeColor = System.Drawing.SystemColors.InfoText;
-            this.ProductLabel.Location = new System.Drawing.Point(0, 0);
-            this.ProductLabel.Name = "ProductLabel";
-            this.ProductLabel.Padding = new System.Windows.Forms.Padding(0, 3, 3, 3);
-            this.ProductLabel.Size = new System.Drawing.Size(168, 35);
-            this.ProductLabel.TabIndex = 0;
-            this.ProductLabel.Text = "DBScope 1.6";
             // 
             // TableUI
             // 
@@ -281,8 +215,8 @@ namespace DBScope
             this.TableColumnsGrid.AllowUserToAddRows = false;
             this.TableColumnsGrid.AllowUserToDeleteRows = false;
             this.TableColumnsGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.TableColumnsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle14;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.TableColumnsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
             this.TableColumnsGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TableColumnsGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.TableColumnsGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -309,8 +243,8 @@ namespace DBScope
             // TableSampleDataGrid
             // 
             this.TableSampleDataGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.TableSampleDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle15;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.TableSampleDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle2;
             this.TableSampleDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
             this.TableSampleDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.TableSampleDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -338,8 +272,8 @@ namespace DBScope
             // 
             // TableDataGrid
             // 
-            dataGridViewCellStyle16.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.TableDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle16;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.TableDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
             this.TableDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
             this.TableDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.TableDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -370,8 +304,8 @@ namespace DBScope
             this.TableRowGrid.AllowUserToAddRows = false;
             this.TableRowGrid.AllowUserToDeleteRows = false;
             this.TableRowGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle17.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.TableRowGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle17;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.TableRowGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle4;
             this.TableRowGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
             this.TableRowGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.TableRowGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -423,8 +357,8 @@ namespace DBScope
             this.ColumnStatsGrid.AllowUserToAddRows = false;
             this.ColumnStatsGrid.AllowUserToDeleteRows = false;
             this.ColumnStatsGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle18.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ColumnStatsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle18;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ColumnStatsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle5;
             this.ColumnStatsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ColumnStatsGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ColumnStatsGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -456,8 +390,8 @@ namespace DBScope
             this.ColumnDataGrid.AllowUserToAddRows = false;
             this.ColumnDataGrid.AllowUserToDeleteRows = false;
             this.ColumnDataGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle19.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ColumnDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle19;
+            dataGridViewCellStyle6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ColumnDataGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle6;
             this.ColumnDataGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ColumnDataGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.ColumnDataGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -561,8 +495,8 @@ namespace DBScope
             // ResultsGrid
             // 
             this.ResultsGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle20.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ResultsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle20;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ResultsGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle7;
             this.ResultsGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCellsExceptHeader;
             this.ResultsGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.ResultsGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -595,8 +529,8 @@ namespace DBScope
             this.ResultsRowGrid.AllowUserToAddRows = false;
             this.ResultsRowGrid.AllowUserToDeleteRows = false;
             this.ResultsRowGrid.AllowUserToResizeRows = false;
-            dataGridViewCellStyle21.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ResultsRowGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle21;
+            dataGridViewCellStyle8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ResultsRowGrid.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle8;
             this.ResultsRowGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ResultsRowGrid.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCellsExceptHeaders;
             this.ResultsRowGrid.BorderStyle = System.Windows.Forms.BorderStyle.None;
@@ -645,8 +579,8 @@ namespace DBScope
             this.ConnectionInfo.AllowUserToAddRows = false;
             this.ConnectionInfo.AllowUserToDeleteRows = false;
             this.ConnectionInfo.AllowUserToResizeRows = false;
-            dataGridViewCellStyle22.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ConnectionInfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle22;
+            dataGridViewCellStyle9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ConnectionInfo.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle9;
             this.ConnectionInfo.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ConnectionInfo.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ConnectionInfo.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -665,19 +599,19 @@ namespace DBScope
             // 
             this.ReservedWords.AllowUserToAddRows = false;
             this.ReservedWords.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle23.BackColor = System.Drawing.SystemColors.Window;
-            this.ReservedWords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle23;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            this.ReservedWords.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle10;
             this.ReservedWords.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ReservedWords.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.ReservedWords.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle24.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            dataGridViewCellStyle24.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle24.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle24.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle24.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle24.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ReservedWords.DefaultCellStyle = dataGridViewCellStyle24;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ReservedWords.DefaultCellStyle = dataGridViewCellStyle11;
             this.ReservedWords.Dock = System.Windows.Forms.DockStyle.Right;
             this.ReservedWords.Location = new System.Drawing.Point(394, 0);
             this.ReservedWords.Name = "ReservedWords";
@@ -694,8 +628,8 @@ namespace DBScope
             this.DataTypes.AllowUserToAddRows = false;
             this.DataTypes.AllowUserToDeleteRows = false;
             this.DataTypes.AllowUserToResizeRows = false;
-            dataGridViewCellStyle25.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DataTypes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle25;
+            dataGridViewCellStyle12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DataTypes.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle12;
             this.DataTypes.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.DataTypes.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.DataTypes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -724,8 +658,8 @@ namespace DBScope
             // 
             // ConnectionStringValues
             // 
-            dataGridViewCellStyle26.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.ConnectionStringValues.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle26;
+            dataGridViewCellStyle13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ConnectionStringValues.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle13;
             this.ConnectionStringValues.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ConnectionStringValues.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.ConnectionStringValues.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
@@ -788,6 +722,72 @@ namespace DBScope
             this.AddConnectionButton.UseVisualStyleBackColor = true;
             this.AddConnectionButton.Click += new System.EventHandler(this.AddConnectionButton_Click);
             // 
+            // AboutUI
+            // 
+            this.AboutUI.BackColor = System.Drawing.SystemColors.Info;
+            this.AboutUI.Controls.Add(this.LicenseLink);
+            this.AboutUI.Controls.Add(this.SiteLink);
+            this.AboutUI.Controls.Add(this.CreditLabel);
+            this.AboutUI.Controls.Add(this.ProductLabel);
+            this.AboutUI.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.AboutUI.Location = new System.Drawing.Point(0, 0);
+            this.AboutUI.Name = "AboutUI";
+            this.AboutUI.Size = new System.Drawing.Size(542, 622);
+            this.AboutUI.TabIndex = 0;
+            // 
+            // LicenseLink
+            // 
+            this.LicenseLink.AutoSize = true;
+            this.LicenseLink.Dock = System.Windows.Forms.DockStyle.Top;
+            this.LicenseLink.Location = new System.Drawing.Point(0, 73);
+            this.LicenseLink.Name = "LicenseLink";
+            this.LicenseLink.Padding = new System.Windows.Forms.Padding(7, 3, 3, 3);
+            this.LicenseLink.Size = new System.Drawing.Size(171, 19);
+            this.LicenseLink.TabIndex = 3;
+            this.LicenseLink.TabStop = true;
+            this.LicenseLink.Tag = "http://www.gnu.org/licenses/gpl.html";
+            this.LicenseLink.Text = "GNU General Public License 2.0";
+            this.LicenseLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.LicenseLink_LinkClicked);
+            // 
+            // SiteLink
+            // 
+            this.SiteLink.AutoSize = true;
+            this.SiteLink.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SiteLink.Location = new System.Drawing.Point(0, 54);
+            this.SiteLink.Name = "SiteLink";
+            this.SiteLink.Padding = new System.Windows.Forms.Padding(7, 3, 3, 3);
+            this.SiteLink.Size = new System.Drawing.Size(244, 19);
+            this.SiteLink.TabIndex = 2;
+            this.SiteLink.TabStop = true;
+            this.SiteLink.Text = "http://webcoder.info/downloads/DBScope.html";
+            this.SiteLink.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.SiteLink_LinkClicked);
+            // 
+            // CreditLabel
+            // 
+            this.CreditLabel.AutoSize = true;
+            this.CreditLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.CreditLabel.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.CreditLabel.Location = new System.Drawing.Point(0, 35);
+            this.CreditLabel.Margin = new System.Windows.Forms.Padding(3);
+            this.CreditLabel.Name = "CreditLabel";
+            this.CreditLabel.Padding = new System.Windows.Forms.Padding(7, 3, 3, 3);
+            this.CreditLabel.Size = new System.Drawing.Size(96, 19);
+            this.CreditLabel.TabIndex = 1;
+            this.CreditLabel.Text = "by Brian Lalonde";
+            // 
+            // ProductLabel
+            // 
+            this.ProductLabel.AutoSize = true;
+            this.ProductLabel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.ProductLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProductLabel.ForeColor = System.Drawing.SystemColors.InfoText;
+            this.ProductLabel.Location = new System.Drawing.Point(0, 0);
+            this.ProductLabel.Name = "ProductLabel";
+            this.ProductLabel.Padding = new System.Windows.Forms.Padding(0, 3, 3, 3);
+            this.ProductLabel.Size = new System.Drawing.Size(168, 35);
+            this.ProductLabel.TabIndex = 0;
+            this.ProductLabel.Text = "DBScope 1.6";
+            // 
             // Scope
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -800,8 +800,6 @@ namespace DBScope
             this.Splitter.Panel1.ResumeLayout(false);
             this.Splitter.Panel2.ResumeLayout(false);
             this.Splitter.ResumeLayout(false);
-            this.AboutUI.ResumeLayout(false);
-            this.AboutUI.PerformLayout();
             this.TableUI.ResumeLayout(false);
             this.TableUI.PerformLayout();
             this.TableTabs.ResumeLayout(false);
@@ -840,6 +838,8 @@ namespace DBScope
             this.ProviderUI.ResumeLayout(false);
             this.ProviderUI.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ConnectionStringValues)).EndInit();
+            this.AboutUI.ResumeLayout(false);
+            this.AboutUI.PerformLayout();
             this.ResumeLayout(false);
 
         }

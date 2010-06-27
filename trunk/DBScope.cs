@@ -111,22 +111,50 @@ namespace DBScope
             {
                 if (TableName != "?")
                     return Connection.GetSchema("Columns", TableFilter);
-                string value = Microsoft.VisualBasic.Interaction.InputBox("Search all (n)(var)char database columns for a value:",
-                    "Blind Search", "", -1, -1);
                 var columns = Connection.GetSchema("Columns");
+                if (!columns.Columns.Contains("DATA_TYPE"))
+                {
+                    //TODO: TableRowCount.Text = "All columns";
+                    return columns;
+                }
                 var found = columns.Clone();
                 found.Columns.Add("VALUE_MATCHES", typeof(int));
-                foreach (var row in columns.Select("DATA_TYPE in ('varchar','nvarchar','char','nchar') and CHARACTER_MAXIMUM_LENGTH >= " + value.Length))
+                found.Columns["VALUE_MATCHES"].SetOrdinal(4);
+                string value = Microsoft.VisualBasic.Interaction.InputBox(
+                    "Search all database columns for a value:", "Blind Search", "", -1, -1);
+                if (String.IsNullOrEmpty(value))
                 {
-                    var matchcmd = Connection.CreateCommand();
-                    matchcmd.CommandText = String.Format("select count(*) as matches from [{0}].[{1}] where [{2}] = '{3}'",
-                        row["TABLE_SCHEMA"], row["TABLE_NAME"], row["COLUMN_NAME"], value.Replace("'","''"));
-                    matchcmd.CommandType = CommandType.Text;
-                    var matches = (int)matchcmd.ExecuteScalar();
-                    if (matches <= 0) continue;
-                    found.ImportRow(row);
-                    found.Rows[found.Rows.Count - 1]["VALUE_MATCHES"] = matches;
+                    //TODO: TableRowCount.Text = "All columns";
+                    return columns;
                 }
+                //TODO: TableRowCount.Text = String.Format("Blind search for '{0}'", value);
+                foreach (var row in columns.Select("DATA_TYPE in ('varchar','nvarchar','char','nchar') and CHARACTER_MAXIMUM_LENGTH >= " + value.Length))
+                    CountMatches(String.Format("select count(*) as matches from [{0}].[{1}] where [{2}] = '{3}'",
+                        row["TABLE_SCHEMA"], row["TABLE_NAME"], row["COLUMN_NAME"], value.Replace("'", "''")), row, found);
+                long longvalue;
+                if (Int64.TryParse(value, out longvalue))
+                    foreach (var row in columns.Select("DATA_TYPE in ('int','smallint','tinyint','bigint')"))
+                        CountMatches(String.Format("select count(*) as matches from [{0}].[{1}] where [{2}] = {3}",
+                            row["TABLE_SCHEMA"], row["TABLE_NAME"], row["COLUMN_NAME"], longvalue), row, found);
+                double doublevalue;
+                if (Double.TryParse(value, out doublevalue))
+                    foreach (var row in columns.Select("DATA_TYPE in ('real','float')"))
+                        CountMatches(String.Format("select count(*) as matches from [{0}].[{1}] where [{2}] = {3}",
+                            row["TABLE_SCHEMA"], row["TABLE_NAME"], row["COLUMN_NAME"], doublevalue), row, found);
+                decimal decimalvalue;
+                if (Decimal.TryParse(value, out decimalvalue))
+                    foreach (var row in columns.Select("DATA_TYPE in ('money','smallmoney')"))
+                        CountMatches(String.Format("select count(*) as matches from [{0}].[{1}] where [{2}] = {3}",
+                            row["TABLE_SCHEMA"], row["TABLE_NAME"], row["COLUMN_NAME"], decimalvalue), row, found);
+                DateTime datetimevalue;
+                if (DateTime.TryParse(value, out datetimevalue))
+                    foreach (var row in columns.Select("DATA_TYPE in ('datetime','smalldatetime')"))
+                        CountMatches(String.Format(datetimevalue.Date == datetimevalue
+                            ? "select count(*) as matches from [{0}].[{1}] where datediff(day,[{2}],'{3:yyyy-MM-dd}') = 0"
+                            : datetimevalue.Second == 0
+                            ? "select count(*) as matches from [{0}].[{1}] where datediff(minute,[{2}],'{3:yyyy-MM-dd HH:mm}') = 0"
+                            : "select count(*) as matches from [{0}].[{1}] where [{2}] = '{3:yyyy-MM-dd HH:mm:ss.fffff}'",
+                            row["TABLE_SCHEMA"], row["TABLE_NAME"], row["COLUMN_NAME"], datetimevalue), row, found);
                 return found;
             }
 
@@ -139,6 +167,28 @@ namespace DBScope
             public DbCommand CreateCommand()
             {
                 return Connection.CreateCommand();
+            }
+
+            private void CountMatches(string commandText, DataRow row, DataTable found)
+            {
+                try
+                {
+                    using (var matchcmd = Connection.CreateCommand())
+                    {
+                        matchcmd.CommandText = commandText;
+                        matchcmd.CommandType = CommandType.Text;
+                        var matches = (int)matchcmd.ExecuteScalar();
+                        if (matches > 0)
+                        {
+                            found.ImportRow(row);
+                            found.Rows[found.Rows.Count - 1]["VALUE_MATCHES"] = matches;
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    Trace.TraceError(ex.ToString());
+                }
             }
         }
 
