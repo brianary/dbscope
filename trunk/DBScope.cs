@@ -109,7 +109,25 @@ namespace DBScope
 
             public DataTable GetColumns()
             {
-                return Connection.GetSchema("Columns", TableFilter);
+                if (TableName != "?")
+                    return Connection.GetSchema("Columns", TableFilter);
+                string value = Microsoft.VisualBasic.Interaction.InputBox("Search all (n)(var)char database columns for a value:",
+                    "Blind Search", "", -1, -1);
+                var columns = Connection.GetSchema("Columns");
+                var found = columns.Clone();
+                found.Columns.Add("VALUE_MATCHES", typeof(int));
+                foreach (var row in columns.Select("DATA_TYPE in ('varchar','nvarchar','char','nchar') and CHARACTER_MAXIMUM_LENGTH >= " + value.Length))
+                {
+                    var matchcmd = Connection.CreateCommand();
+                    matchcmd.CommandText = String.Format("select count(*) as matches from [{0}].[{1}] where [{2}] = '{3}'",
+                        row["TABLE_SCHEMA"], row["TABLE_NAME"], row["COLUMN_NAME"], value.Replace("'","''"));
+                    matchcmd.CommandType = CommandType.Text;
+                    var matches = (int)matchcmd.ExecuteScalar();
+                    if (matches <= 0) continue;
+                    found.ImportRow(row);
+                    found.Rows[found.Rows.Count - 1]["VALUE_MATCHES"] = matches;
+                }
+                return found;
             }
 
             public string Database
@@ -247,6 +265,9 @@ namespace DBScope
             DataTree.UseWaitCursor = true;
             DataTree.Update();
             node.Nodes.Clear();
+            TreeNode qnode = new TreeNode("?");
+            qnode.Tag = new string[] { };
+            node.Nodes.Add(qnode);
             foreach (string tabletype in new string[] { "Tables", "Views" })
             {
                 if (!context.Has(tabletype)) continue;
